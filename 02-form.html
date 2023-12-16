@@ -5,13 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
-    <script type="module" crossorigin src="/goit-js-hw-09/assets/modulepreload-polyfill-ec808ebb.js"></script>
+    
+    <script type="module" crossorigin src="/goit-js-hw-09/commonHelpers2.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-09/assets/modulepreload-polyfill-ec808ebb.js">
+    <link rel="stylesheet" href="/goit-js-hw-09/assets/02-form-e72c7cf5.css">
   </head>
   <body>
     <section>
       <a href="./index.html">Go to home</a>
       <h1>Welcome to Form 3</h1>
     </section>
+    <form class="feedback-form" autocomplete="off">
+      <label><span>Email</span>        
+        <input type="email" name="email" autofocus />
+      </label>
+      <label>
+        <span>Message</span>
+        <textarea name="message" rows="8"></textarea>
+      </label>
+      <button type="submit"><span class="btn-send">Submit</span></button>
+    </form>
     
   </body>
 </html>
