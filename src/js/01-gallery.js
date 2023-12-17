@@ -75,13 +75,11 @@ const listEl = images
           class="gallery-image"
           src="${imag.preview}"
           alt="${imag.description}"
-          width="360"
-          height="200"
-        />
+          />
       </a>
-    </li>`;
+    </li>`
   })
-  .join();
+  .join('');
 
 gallery.insertAdjacentHTML('afterbegin', listEl);
 
@@ -89,4 +87,17 @@ const newGallery = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
   captionsDataAlt: 'Description',
+   
+});
+
+
+newGallery.on('shown.simplelightbox', function () {
+  const modal = document.querySelector('.sl-wrapper');
+  modal.style.backgroundColor = 'rgba(46, 47, 66, 0.80)';
+
+});
+
+newGallery.on('closed.simplelightbox', function () {
+  const modal = document.querySelector('.sl-wrapper');
+  modal.style.backgroundColor = '';
 });
